@@ -26,14 +26,18 @@ body {
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                 url('../images/fotobuffet.jpg') no-repeat center center/cover;
-    min-height: 100vh; /* Usar min-height em vez de height */
-    height: auto; /* Adicionar esta linha */
+    min-height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--branco);
     position: relative;
+    
+    /* Adicione estas propriedades */
+    background-attachment: scroll; /* Remove parallax em mobile */
+    -webkit-background-size: cover; /* Para compatibilidade com Safari */
 }
 
 .banner-content {
