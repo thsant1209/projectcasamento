@@ -24,20 +24,23 @@ body {
 
 /* Banner Principal */
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('../images/fotobuffet.jpg') no-repeat center center/cover;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf') no-repeat center center;
+    background-size: cover;
     min-height: 100vh;
-    height: auto;
+    width: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--branco);
-    position: relative;
+    color: white;
     
-    /* Adicione estas propriedades */
-    background-attachment: scroll; /* Remove parallax em mobile */
-    -webkit-background-size: cover; /* Para compatibilidade com Safari */
+    /* Fix para iOS */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 @media (max-width: 768px) {
