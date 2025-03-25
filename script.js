@@ -170,3 +170,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Garantir que a imagem de fundo carregue corretamente
+window.addEventListener('load', function() {
+    const banner = document.querySelector('.banner');
+    if (banner) {
+        // Forçar redesenho do banner
+        banner.style.display = 'none';
+        banner.offsetHeight; // Trigger reflow
+        banner.style.display = 'flex';
+        
+        // Verificar se a imagem carregou
+        const bannerImg = document.querySelector('.banner-background img');
+        if (bannerImg && bannerImg.complete && bannerImg.naturalHeight === 0) {
+            // Se a imagem falhou, usar fallback
+            bannerImg.src = 'img/fotobuffet-desktop.jpg';
+        }
+    }
+});
+
+// Fallback para browsers antigos que não suportam <picture>
+if (!('HTMLPictureElement' in window)) {
+    const bannerBg = document.querySelector('.banner-background');
+    if (bannerBg) {
+        const img = bannerBg.querySelector('img');
+        if (window.innerWidth >= 768) {
+            img.src = 'img/fotobuffet-desktop.jpg';
+        } else {
+            img.src = 'img/fotobuffet-mobile.jpg';
+        }
+    }
+}
+
