@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasmin & Thiago - 18/10/2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Banner Principal -->
+    <header class="banner">
+        <div class="banner-content">
+            <img src="img/ftfundo.png" alt="Yasmin e Thiago" class="foto-casal">
+            <h1>Yasmin & Thiago</h1>
+            <p class="frase">Nossa história de amor começa uma nova jornada, e hoje queremos compartilhar desse novo capitulo com você!</p>
+            <p class="data">18 de Outubro de 2025</p>
+        </div>
+    </header>
+
+    <!-- Menu de Navegação -->
+    <nav class="menu">
+        <ul>
+            <li><a href="#informacoes">Informações</a></li>
+            <li><a href="#fotos">Fotos</a></li>
+            <li><a href="#confirmacao">Confirmação</a></li>
+            <li><a href="#presentes">Lista de Presentes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção de Informações -->
+    <section id="informacoes" class="secao">
+        <h2>Informações do Casamento</h2>
+        <div class="info-content">
+            <div class="info-item">
+                <i class="fas fa-church"></i>
+                <h3>Cerimônia</h3>
+                
+                <p>18 de Outubro de 2025 - 18:30h</p>
+                <p>Igreja São José Operário</p>
+                <p>Av Central Oeste, 155 - Araturi</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.7788682223045!2d-38.638134725497316!3d-3.7665557433664456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74ca3974f5311%3A0x9847f8cc096794af!2zUGFyw7NxdWlhIFPDo28gSm9zw6kgT3BlcsOhcmlv!5e1!3m2!1spt-BR!2sbr!4v1742924373471!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                </div>
+                
+            <div class="info-item">
+                <i class="fas fa-utensils"></i>
+                <h3>Recepção</h3>
+               
+                <p>18 de Outubro de 2025 - 20:30h</p>
+                <p>North Buffet</p>
+                <p>Tv. Antònio Joaquim, 55 - Antônio Bezerra</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.9046462431256!2d-38.594477125026245!3d-3.736048596237865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74bb65ddde6a7%3A0xb8afdc65a30ec361!2sNorth%20Buffet%20Eventos!5e1!3m2!1spt-BR!2sbr!4v1742924639469!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Fotos -->
+    <section id="fotos" class="secao">
+        <h2>Nossos Momentos</h2>
+        <div class="carrossel">
+            <div class="carrossel-container">
+                <img src="img/fotoya.jpeg" alt="Foto do casal 1" class="carrossel-item active">
+                <img src="img/fotom.png" alt="Foto do casal 2" class="carrossel-item">
+                <img src="img/ftfundo.png" alt="Foto do casal 3" class="carrossel-item">
+                <img src="img/ft1.jpg" alt="Foto do casal 3" class="carrossel-item">
+                <img src="img/ft2.jpg" alt="Foto do casal 3" class="carrossel-item">
+                <img src="img/ft3.jpg" alt="Foto do casal 3" class="carrossel-item">
+                <img src="img/ft4.jpg" alt="Foto do casal 3" class="carrossel-item">
+                <img src="img/ftteste.png" alt="Foto do casal 3" class="carrossel-item">
+            </div>
+            <div class="carrossel-controles">
+                <button class="carrossel-controle prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carrossel-controle next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>-->
+
+    <!-- Seção de Confirmação -->
+    <section id="confirmacao" class="secao">
+        <h2>Confirmação de Presença</h2>
+        <form id="confirmacao-form" class="confirmacao-form">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="convidados">Quantidade de Convidados</label>
+                <select id="convidados" name="convidados" required>
+                    <option value="1">1 pessoa</option>
+                    <option value="2">2 pessoas</option>
+                    <option value="3">3 pessoas</option>
+                    <option value="4">4 pessoas</option>
+                    <option value="5">5 pessoas</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem para o casal (opcional)</label>
+                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn">Confirmar Presença</button>
+        </form>
+        <div id="confirmacao-sucesso" class="confirmacao-sucesso" style="display: none;">
+            <p>Presença confirmada com sucesso! Obrigado!</p>
+        </div>
+    </section>
+
+    <!-- Seção de Lista de Presentes -->
+    <section id="presentes" class="secao">
+        <h2>Lista de Presentes</h2>
+        <h3>Estamos de casa nova! E para começar essa nova fase com muito carinho, nossa lista de casamento será também nossos primeiros presentes. Caso esteja em duvida do que deseja nos presentear, confira a lista e nos ajude a tornar nosso lar ainda mais especial. Obrigado por fazer parte desse momento! Ah,e para facilitar o seu presente colocamos duas formas de pagamento; Pix e link de pagamento com parcelamento sem taxas! </h3>
+        <div class="presentes-grid">
+            <!-- Presente 1 -->
+            <div class="presente-card">
+                <img src="img/micro-ondas.png" alt="Micro-ondas">
+                <h3>Micro-ondas</h3>
+                <p class="preco">R$ 692,55</p>
+                <button class="btn-presentear" data-presente="Micro-ondas" data-valor="692">Presentear</button>
+            </div>
+            <!-- Presente 2 -->
+            <div class="presente-card">
+                <img src="img/forno.png" alt="Forno">
+                <h3>Forno</h3>
+                <p class="preco">R$ 542,90</p>
+                <button class="btn-presentear" data-presente="Forno" data-valor="540">Presentear</button>
+            </div>
+            <!-- Presente 3 -->
+            <div class="presente-card">
+                <img src="img/cafeteira-eletrica.png" alt="Cafeteira Elétrica">
+                <h3>Cafeteira Elétrica</h3>
+                <p class="preco">R$ 122,55</p>
+                <button class="btn-presentear" data-presente="Cafeteira Elétrica" data-valor="122">Presentear</button>
+            </div>
+            <!-- Presente 4 -->
+            <div class="presente-card">
+                <img src="img/grill.png" alt="Cafeteira Elétrica">
+                <h3>Sanduicheira Grill Mondial</h3>
+                <p class="preco">R$ 150,05</p>
+                <button class="btn-presentear" data-presente="Cafeteira Elétrica" data-valor="155">Presentear</button>
+            </div>
+            <!-- Presente 5 -->
+            <div class="presente-card">
+                <img src="img/cooktop.png" alt="Cafeteira Elétrica">
+                <h3>Fogão Cooktop 5 Bocas</h3>
+                <p class="preco">R$ 429,90</p>
+                <button class="btn-presentear" data-presente="Cafeteira Elétrica" data-valor="429">Presentear</button>
+            </div>
+            <!-- Presente 6 -->
+            <div class="presente-card">
+                <img src="img/liquidificador.png" alt="Liquidificador Mondial Turbo">
+                <h3>Liquidificador Mondial Turbo</h3>
+                <p class="preco">R$ 120,55</p>
+                <button class="btn-presentear" data-presente="Liquidificador Mondial Turbo" data-valor="120">Presentear</button>
+            </div>
+            <!-- Presente 7 -->
+            <div class="presente-card">
+                <img src="img/geladeira.png" alt="Geladeira Brastemp">
+                <h3>Vaquinha para comprar a Geladeira</h3>
+                <p class="preco">R$ 400,00</p>
+                <button class="btn-presentear" data-presente="Geladeira Brastemp" data-valor="400">Presentear</button>
+            </div>
+            <!-- Presente 8 -->
+            <div class="presente-card">
+                <img src="img/sofa.png" alt="Sofá Retrátil">
+                <h3>Sofá Retrátil</h3>
+                <p class="preco">R$ 1.599,29</p>
+                <button class="btn-presentear" data-presente="Sofá Retrátil" data-valor="1599">Presentear</button>
+            </div>
+            <!-- Presente 9 -->
+            <div class="presente-card">
+                <img src="img/liquidificador.png" alt="Cafeteira Elétrica">
+                <h3>Liquidificador Mondial Turbo</h3>
+                <p class="preco">R$ 120,55</p>
+                <button class="btn-presentear" data-presente="Cafeteira Elétrica" data-valor="120">Presentear</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Pagamento -->
+    <div id="modal-pagamento" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-titulo">Pagamento</h2>
+            <div class="pagamento-info">
+                <div class="qr-code">
+                    <img src="img/qrcode.png" alt="QR Code PIX">
+                    <p>Escaneie o QR Code para pagar</p>
+                </div>
+                <div class="dados-pagamento">
+                    <h3>Dados para Transferência PIX</h3>
+                    <p><strong>Banco:</strong> Banco do Brasil</p>
+                    <p><strong>Chave PIX:</strong> yasmin.thiago@casamento.com</p>
+                    <button id="copiar-chave" class="btn-copiar">Copiar Chave</button>
+                    <p class="ou">OU</p>
+                    <a href="https://pag.ae/7YxXyZz" target="_blank" class="btn-link-pagamento">Link de Pagamento</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Yasmin & Thiago - 18/10/2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
