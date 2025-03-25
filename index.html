@@ -11,13 +11,23 @@
 <body>
     <!-- Banner Principal -->
     <header class="banner">
-        <div class="banner-content">
-            <img src="ftfundo.png" alt="Yasmin e Thiago" class="foto-casal">
-            <h1>Yasmin & Thiago</h1>
-            <p class="frase">Nossa história de amor começa uma nova jornada, e hoje queremos compartilhar desse novo capitulo com você!</p>
-            <p class="data">18 de Outubro de 2025</p>
-        </div>
-    </header>
+    <div class="banner-background">
+        <!-- Imagem para desktop -->
+        <picture>
+            <source media="(min-width: 768px)" srcset="img/fotobuffet-desktop.jpg">
+            <!-- Imagem para mobile -->
+            <source media="(max-width: 767px)" srcset="img/fotobuffet-mobile.jpg">
+            <!-- Fallback -->
+            <img src="img/fotobuffet-desktop.jpg" alt="Fundo do buffet" class="banner-img">
+        </picture>
+    </div>
+    <div class="banner-content">
+        <img src="img/ftfundo.png" alt="Yasmin e Thiago" class="foto-casal">
+        <h1>Yasmin & Thiago</h1>
+        <p class="frase">Nossa história de amor começa uma nova jornada, e hoje queremos compartilhar desse novo capítulo com você!</p>
+        <p class="data">18 de Outubro de 2025</p>
+    </div>
+</header>
 
     <!-- Menu de Navegação -->
     <nav class="menu">
