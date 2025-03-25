@@ -170,34 +170,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Garantir que a imagem de fundo carregue corretamente
-window.addEventListener('load', function() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Efeito de carregamento do banner
     const banner = document.querySelector('.banner');
     if (banner) {
-        // Forçar redesenho do banner
-        banner.style.display = 'none';
-        banner.offsetHeight; // Trigger reflow
-        banner.style.display = 'flex';
+        // Verifica se é mobile para carregar imagem otimizada
+        if (window.innerWidth <= 768) {
+            banner.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/fotobuffet-mobile.jpg')";
+        }
         
-        // Verificar se a imagem carregou
-        const bannerImg = document.querySelector('.banner-background img');
-        if (bannerImg && bannerImg.complete && bannerImg.naturalHeight === 0) {
-            // Se a imagem falhou, usar fallback
-            bannerImg.src = 'img/fotobuffet-desktop.jpg';
+        // Adiciona classe de animação após carregamento
+        window.addEventListener('load', function() {
+            banner.classList.add('loaded');
+        });
+    }
+
+    // Restante do seu JavaScript permanece igual
+    // ...
+});
+
+// Função para detectar mudança de tamanho de tela
+window.addEventListener('resize', function() {
+    const banner = document.querySelector('.banner');
+    if (banner) {
+        if (window.innerWidth <= 768) {
+            banner.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/fotobuffet-mobile.jpg')";
+        } else {
+            banner.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/fotobuffet-desktop.jpg')";
         }
     }
 });
-
-// Fallback para browsers antigos que não suportam <picture>
-if (!('HTMLPictureElement' in window)) {
-    const bannerBg = document.querySelector('.banner-background');
-    if (bannerBg) {
-        const img = bannerBg.querySelector('img');
-        if (window.innerWidth >= 768) {
-            img.src = 'img/fotobuffet-desktop.jpg';
-        } else {
-            img.src = 'img/fotobuffet-mobile.jpg';
-        }
-    }
-}
-

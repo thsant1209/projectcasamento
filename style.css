@@ -22,54 +22,26 @@ body {
     background-color: var(--cinza);
 }
 
-/* Banner Principal */
-/* Banner Principal */
-/* Banner Principal */
+/* Banner Principal - Versão Responsiva */
 .banner {
-    position: relative;
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('img/fotobuffet.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--branco);
-}
-
-.banner-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.banner-background::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-}
-
-.banner-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    position: relative;
 }
 
 .banner-content {
     max-width: 800px;
     padding: 20px;
-    position: relative;
-    z-index: 1;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Resto do seu CSS permanece igual */
 .foto-casal {
     width: 250px;
     height: 250px;
@@ -101,6 +73,50 @@ body {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* Media Queries para o Banner */
+@media (max-width: 768px) {
+    .banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                          url('img/fotobuffet.jpeg');
+        height: 90vh;
+    }
+    
+    .banner h1 {
+        font-size: 2.2rem;
+    }
+    
+    .banner .frase {
+        font-size: 1.2rem;
+    }
+    
+    .banner .data {
+        font-size: 1.5rem;
+    }
+    
+    .foto-casal {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 85vh;
+    }
+    
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    .foto-casal {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Restante do seu CSS permanece igual */
+/* ... */
 /* Menu de Navegação */
 .menu {
     background: linear-gradient(90deg, var(--tiffany), var(--fuchsia));
