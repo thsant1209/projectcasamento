@@ -26,7 +26,7 @@ body {
 .banner {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-        url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf') no-repeat center center;
+        url('../images/fotobuffet.jpg') no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     width: 100%;
@@ -42,7 +42,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-
 @media (max-width: 768px) {
     .banner {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
