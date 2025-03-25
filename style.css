@@ -43,7 +43,7 @@ body {
 @media (max-width: 768px) {
     .banner {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url('../images/fotobuffet-mobile.jpg') no-repeat center center/cover;
+                    url('fotobuffet-mobile.jpg') no-repeat center center/cover;
     }
 }
 
